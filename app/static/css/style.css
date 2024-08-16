@@ -1,0 +1,102 @@
+/* Definindo o estilo do corpo da página */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url('https://cdn.prod.website-files.com/606907b169dcd481e8fd42c4/626af17e37014a34e98e8b02_rob%C3%B4%20IA.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilo para o título */
+h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(41, 128, 185, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os inputs */
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Estilo para o botão */
+button {
+    background: linear-gradient(45deg, #3498db, #2ecc71); 
+    color: #fff;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    text-transform: uppercase; 
+}
+
+button:hover {
+    background: linear-gradient(45deg, #2980b9, #27ae60); 
+    transform: scale(1.05); /* Corrigido comentário */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+/* Estilo para os links */
+a {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+a:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+
+a:visited {
+    color: #0776df; 
+}
+
+.ra-message {
+    position: fixed; /* Fixa a posição da mensagem em relação à viewport */
+    top: 20px; /* Espaçamento do topo da página */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para realmente centralizar */
+    color: #ffffff; /* Cor do texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    margin: 0; /* Remove margens padrões */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para contraste */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}

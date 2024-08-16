@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Diário de Bordo</title>
+</head>
+<body>
+    <h2>Fazer login</h2>
+    <form action="/logar" method="POST">
+        <label for="ra">RA:</label>
+        <input type="text" id="ra" name="ra" maxlength="8" required>
+        <button type="submit">Enviar</button>
+        {% if msgbanco %}
+        <div class="mensagem">
+            {{msgbanco}}
+        </div>
+        {% endif %}
+    </form>
+    <a href="{{ url_for('cadastrar_aluno') }}" class="register-link">Cadastre-se</a>
+</body>
+</html>
