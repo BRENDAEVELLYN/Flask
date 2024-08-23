@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #1a56c4;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: hsl(241, 100%, 53%);
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+
+    {% if alunos %}
+        <table>
+            <tr>
+                <th>RA</th>
+                <th>Nome</th>
+                <th>Tempo de Estudo (meses)</th>
+                <th>Renda_Media_Salarial_Familiar (R$)</th>
+            </tr>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.ra }}</td>
+                <td>{{ aluno.Nome }}</td>
+                <td>{{ aluno.Tempo_de_Estudo }}</td>
+                <td>{{ aluno.Renda_Media_Salarial_Familiar }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Nenhum aluno cadastrado.</p>
+    {% endif %}
+
+    <a href="/">Voltar para a página inicial</a>
+</body>
+</html>
